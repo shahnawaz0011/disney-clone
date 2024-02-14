@@ -25,28 +25,21 @@ async function fetchFromTMDB(url: URL, cacheTime?: number){
     return data;
 }
 
-export async function getMovies(url: URL) {
-console.log(url,'************************************************')
-}
-
 export async function getUpComingMovies(){
     const url = new URL("https://api.themoviedb.org/3/movie/upcoming");
     const data = await fetchFromTMDB(url);
-    // console.log(data.results,'999999999999999999999999999999999999999999')
     
     return data.results;
 }
 export async function getTopRatesMovies(){
     const url = new URL("https://api.themoviedb.org/3/movie/top_rated");
     const data = await fetchFromTMDB(url);
-    // console.log(data.results,'999999999999999999999999999999999999999999')
     
     return data.results;
 }
 export async function getpopularMovies(){
     const url = new URL("https://api.themoviedb.org/3/movie/popular");
     const data = await fetchFromTMDB(url);
-    // console.log(data.results,'999999999999999999999999999999999999999999')
     
     return data.results;
 }
@@ -58,7 +51,6 @@ export async function getDiscoverMovies(id?: string, keywords?: string){
     id && url.searchParams.set("with_genres", id);
 
    const data = await fetchFromTMDB(url);
-   console.log(data.results,'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&7')
    return data.results;
 }
 

@@ -17,7 +17,7 @@ function CarausalBanner({ movies }: Props) {
         <div className="overflow-hidden lg:-mt-40 relative cursor-pointer"
             ref={emblaRef}>
             <div className="flex">
-                {movies.map((movie) => (
+                {(movies || []).map((movie) => (
                     <div key={movie.id} className="flex-full min-w-0 relative">
                         <Image
                             key={movie.id}

@@ -1,15 +1,12 @@
 import CarausalBannerWrapper from "@/components/CarausalBannerWrapper";
 import MoviesCarousel from "@/components/MoviesCarousel";
-import { Button } from "@/components/ui/button";
-import { getTopPopularMovies, getTopRatesMovies, getUpComingMovies, getpopularMovies } from "@/lib/getMovies";
-import Image from "next/image";
+import { getTopRatesMovies, getUpComingMovies, getpopularMovies } from "@/lib/getMovies";
 
 export default async function Home() {
 
   const upComingMovies = await getUpComingMovies()
   const topRatedMovies = await getTopRatesMovies()
   const popularMovies = await getpopularMovies()
-  // const popularMovies = getMovies('https://')
 
   
   return (

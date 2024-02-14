@@ -1,12 +1,9 @@
 import { getDiscoverMovies } from "@/lib/getMovies"
 import CarausalBanner from "./CarausalBanner";
 
-type Props = {
-    id? : string,
-    keywords: string,
-}
-async function CarausalBannerWrapper({id, keywords}: Props) {
-    const movies = await getDiscoverMovies(id, keywords);
+
+async function CarausalBannerWrapper() {
+    const movies = await getDiscoverMovies();
 
 
   return (
